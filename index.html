@@ -1,25 +1,124 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+<head>
+<script src="/assets/jquery.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'>
+<style>
+  body {
+    font-family: helvetica, sans-serif;
+    margin: 0 auto;
+    max-width: 600px;
+    background: #005000;
+  }
+  div {
+    height: 200px;
+    background-size: cover;
+    position: relative;
+    margin: 40px 0 0 0;
+    border-radius: 12px;
+  }
+  h1 {
+    font-family: 'Calligraffitti', cursive;
+    text-align: center;
+    font-size: 75px;
+    color: #000000;
+    margin: 60px 0 0 0;
+  }
+  h2 {
+    text-align: center;
+    color: #999999;
+    margin: 0px 0 70px 0;
+  }
+  p {
+    color: rgba(200,200,200,1);
+    background: black;
+    background: linear-gradient(bottom, rgba(0,0,0,1), rgba(100,0,0,.4));
+    background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(100,0,0,.4));
+    background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(100,0,0,.4));
+    padding: 10px 100px;
+    line-height: 28px;
+    text-align: justify;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    height: 30px;
+    border-radius: 0 0 12px 12px;
+    transition: height .5s;
+    -webkit-transition: height .5s;
+    -moz-transition: height .5s;
+}
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+small {
+  opacity: 0;
+}
 
-    <title>Photo Passion</title>
-  </head>
+.show-description p {
+  height: 150px;
+}
 
-  <body>
+.show-description small {
+  opacity: 1;
+}
 
-    <header>
-      <div class="container">
-        <h1>Photo Book</h1>
-        <h2>Ici vous pourrez découvrir mes photos de mariage, d'animaux etc...</h2>
+.first {
+  background-image: url("http://images.marmitoncdn.org/recipephotos/multiphoto/d8/d82e4d10-4fbb-4888-86dc-24864499f115_normal.jpg");
+}
+.second {
+  background-image: url("https://www.atelierdeschefs.com/media/recette-e20983-papillote-de-saumon-et-poireaux-au-parfum-d-orange.jpg");
+}
+.dessert {
+  background-image: url("http://www.google.fr/url?source=imglanding&ct=img&q=http://www.invitationsgourmandes.fr/wp-content/uploads/2014/01/IMG_1072.jpg&sa=X&ei=Ce9eVdODMIKAU5zSgIgL&ved=0CAkQ8wc&usg=AFQjCNEAFndxHjlIu64oQDk_-w7WKsxyuw");
+}
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
 
-      </div>
-    </header>
+</style>
 
-  </body>
-</html>
+</head>
+
+<body>
+<h1>Fantaisiste</h1>
+<h2>Menu complet $26,50</h2>
+<div class="first">
+  <p>Monsieur Seguin <span class="price">$7,50</span><br />
+  <small>Salade batavia, chevre frais, croutons, jambon cru, raisin sec, cerneau de noix, tomate marinee, huile d'olive, vinaigre de noix. </small></p>
+</div>
+
+<div class="second">
+  <p>Papillotte de saumon <span class="price">$15</span><br />
+  <small>Pave de saumon, creme fraiche, gingembre en poudre, curry en poudre, miel, beurre, oignons eminces.</small></p>
+</div>
+  
+<div class="dessert">
+  <p>Gateau damier <span class="price">$4</span><br />
+  <small>Genoise a la vanille, genoise au cacao, nappage au chocolat a base de nutella.</small></p>
+</div>
+
+<script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
