@@ -24,18 +24,8 @@
     color: rgba(255,255,255,1);
     margin: 100px 0 0 0;
   }
-  h2 {
-    text-align: center;
-    color: #999999;
-    margin: 0px 0 70px 0;
-  }
-  h3 {
-    text-align: left;
-    color: #ffffff;
-  }
-  h4 {
-    text-align: center;
-    color: #ffffff;
+  ul {
+    border: 5px solid;
   }
   p {
     color: rgba(200,200,200,1);
@@ -78,18 +68,26 @@
 </head>
 
 <body>
+
 <h1>Here you'll find my pic of animals and friend.</h1>
-<h2></h2>
-<div class="first">
-  display:inline;
-  <h3>Animals</h3>
-  <p>Horses, Cats, Dogs...</p>
-</div>
-<div class="second">
-  display:inline;
-  <h4>People</h4>
-  <p>Portrait, friends, life...</p>
-</div>
+
+<ul>  
+  <div class="accueil">
+    <p>Présentation Accueil</p>
+  </div>
+
+  <div class="gallerie">
+    <p>Gallerie</p>
+  </div>
+
+  <div class="tarif">
+    <p>Tarif</p>
+  </div>
+
+  <div class="contact">
+    <p>Contacts</p>
+  </div>
+</ul>
 
 <script>
   $('div').on('click', function() {
