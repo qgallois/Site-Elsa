@@ -44,16 +44,10 @@
 	margin: 0 auto 2em;
 	border: 1px solid #ddd;
 	background: #FFF;
-	/* CSS3 effects */
 	background: linear-gradient(#FFF, #FFF 20%, #EEE 80%, #DDD);
 	border-radius: 10px 10px 10px 10px;
 	box-shadow: 0 0 3px rgba(0,0,0, 0.2);
 }
- 
-/* avanced box-shadow
- * tutorial @
- * http://www.creativejuiz.fr/blog/les-tutoriels/ombre-avancees-avec-css3-et-box-shadow 
-*/
 #slideshow:before,
 #slideshow:after {
 	position: absolute;
@@ -74,7 +68,6 @@
 	right:0;
 	transform: rotate(4deg);
 }
-  /* gestion des dimensions et débordement du conteneur */
 #slideshow .container {
 	position:relative;
 	width: 640px;
@@ -90,10 +83,8 @@
 	background: rgb(214,98,13);
 	background: rgba(214,98,13,.8);
 	width: 0;
-	/* fonction d'animation */
 	animation: timeliner 32s infinite;
-}	
-/* on prévoit un petit espace gris pour la timeline */
+}
 #slideshow .container:after {
 	position:absolute;
 	bottom: 0; left:0;
@@ -102,23 +93,17 @@
 	height: 1px;
 	background: #999;
 }
-/* 
-   le conteneur des slides
-   en largeur il fait 100% x le nombre de slides
-*/
 #slideshow .slider {
 	position: absolute;
 	left:0; top:0;
 	width: 700%;
 	height: 310px;
 }
-/* annulation des marges sur figure */
 #slideshow figure {
 	position:relative;
 	display:inline-block;
 	padding:0; margin:0;
 }
-/* petit effet de vignette sur les images */
 #slideshow figure:after {
 	position: absolute;
 	display:block;
@@ -127,7 +112,6 @@
 	width: 100%; height: 100%;
 	box-shadow: 0 0 65px rgba(0,0,0, 0.5) inset;
 }
-/* fonction d'animation, n'oubliez pas de prefixer ! */
 @keyframes slider {
 	0%, 10%, 100%		{ left: 0 }
 	15%, 25%		{ left: -100% }
@@ -137,18 +121,14 @@
 	70%, 80%		{ left: -500% }
 	85%, 95%		{ left: -600% }
 }
-/* complétez le sélecteur : */
 #slideshow .slider {
-	/* ... avec la propriété animation */
 	animation: slider 32s infinite;
 }
 @keyframes timeliner {
 	0%, 25%, 50%, 75%, 100%	{ width: 0;		}
 	20%, 45%, 70%, 90%		{ width: 640px;	}
 }
-/* ajouter à l'élément : */
 #slideshow figcaption {
-	/* ... la propriété animation */
 	animation: figcaptionner 32s infinite;
 }
 </style>
